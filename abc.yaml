@@ -1,0 +1,14 @@
+---
+ -name: cfreate image using docker file
+  hosts: all
+  tasks:
+
+    - name: Build docker image
+      docker_image:
+        name: myimage:latest
+        build:
+          path: /root/dockerfile
+
+        source: build
+
+
